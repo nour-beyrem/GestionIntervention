@@ -17,7 +17,7 @@ import java.util.ArrayList;
         setContentView(R.layout.activity_main);
 
         db = openOrCreateDatabase("Intervention",MODE_PRIVATE,null);
-        db.execSQL("CREATE TABLE IF NOT EXISTS INTERVENTIONS(id number primary key, titreIntervention varchar, client varchar, adressClient varchar, heureIntervention DATE);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS INTERVENTIONS(id number primary key, titreIntervention varchar, client varchar, adressClient varchar, heureIntervention DATE, termine boolean);");
         _lsvInterventions = (ListView) findViewById(R.id.lsvInterventions);
 
         final ArrayList<Intervention> interventions = new ArrayList<Intervention>();
